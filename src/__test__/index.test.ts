@@ -43,13 +43,13 @@ describe('Enforcer plugin test', () => {
     it('Throw Error when authorizer is not provided.', () => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        expect(() => createApp().use(plugin)).toThrowError('Please provide an authorizer instance to plugin.');
+        expect(() => createApp().use(plugin)).toThrow('Please provide an authorizer instance to plugin.');
     });
 
     it('Throw Error when fake authorizer is provided.', () => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        expect(() => createApp().use(plugin, {})).toThrowError('Please provide an authorizer instance to plugin.');
+        expect(() => createApp().use(plugin, {})).toThrow('Please provide an authorizer instance to plugin.');
     });
 
     describe('by default', () => {
